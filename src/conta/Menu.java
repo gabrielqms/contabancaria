@@ -1,14 +1,17 @@
 package conta;
 
 import java.util.Scanner;
+
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Cores;
 
 public class Menu {
+	
+    public static Scanner leia = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
-		Scanner leia = new Scanner(System.in);
 		
 		int opcao;
 				
@@ -33,12 +36,12 @@ public class Menu {
 			System.out.println("                                                     ");
 			System.out.println("*****************************************************");
 			System.out.println("Entre com a opção desejada:                          ");
-			System.out.println("                                                     " + Cores.TEXT_RESET);
+			System.out.println("                                                     ");
 			
 			opcao = leia.nextInt();
 				
 			if (opcao == 9) {
-				System.out.println(Cores.TEXT_WHITE_BOLD + "\nBanco do Bicho - Onde a confiança é Selvagem!");
+				System.out.println("\nBanco do Bicho - Onde a confiança é Selvagem!");
 				sobre();
 				leia.close();
 				System.exit(0);
@@ -46,39 +49,39 @@ public class Menu {
 				
 			switch (opcao) {
 				case 1:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Criar Conta\n\n");
+					System.out.println("\n Criar Conta");
 				
                     		break;
 				case 2:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Listar todas as Contas\n\n");
+					System.out.println("\n Listar todas as Contas");
 					
                     		break;
 				case 3:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Consultar dados da Conta - por número\n\n");
+					System.out.println("\n Buscar Conta por número");
 	
                     		break;
 				case 4:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Atualizar dados da Conta\n\n");
+					System.out.println("\n Atualizar dados da Conta");
 					
                     		break;
 				case 5:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Apagar a Conta\n\n");
+					System.out.println("\n Apagar Conta");
 		
                    	 	break;
 				case 6:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Saque\n\n");
+					System.out.println("\n Sacar");
 
                    	 	break;
 				case 7:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Depósito\n\n");
+					System.out.println("\n Depositar");
 					
                     		break;
 				case 8:
-					System.out.println(Cores.TEXT_WHITE_BOLD + "Transferência entre Contas\n\n");
+					System.out.println("\n Transferir");
 					
                     		break;
 				default:
-					System.out.println(Cores.TEXT_RED_BOLD + "\nOpção Inválida!\n" + Cores.TEXT_RESET);
+					System.out.println("\nOpção Inválida");
                     		break;
 			}
 		}	
@@ -86,7 +89,8 @@ public class Menu {
 
     public static void sobre() {
 	System.out.println("\n*********************************************************");
-	System.out.println("Projeto Desenvolvido por:Gabriel Macedo ");
+	System.out.println("Projeto Desenvolvido por: Gabriel Macedo ");
+	System.out.println("Apoiado por: Generation Brasil - generation@generation.org");
 	System.out.println("github.com/gabrielqms");
 	System.out.println("*********************************************************");
 
